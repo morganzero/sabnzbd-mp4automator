@@ -20,8 +20,6 @@ RUN pip install 'guessit<2'
 RUN pip install 'subliminal<2'
 RUN pip install stevedore==1.19.1
 RUN pip install qtfaststart
-RUN pip install deluge-client
-RUN pip install gevent
 RUN git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git mp4automator
 
 #Set script file permissions
