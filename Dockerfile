@@ -1,5 +1,5 @@
 FROM linuxserver/sabnzbd
-MAINTAINER wjbeckett
+LABEL maintainer="wjbeckett" 
 
 # Install Git
 #RUN apt-get install --no-cache git
