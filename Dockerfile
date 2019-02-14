@@ -4,11 +4,13 @@ LABEL maintainer="wjbeckett"
 # Install Git
 #RUN apt-get install --no-cache git
 
+# Update package sources
+RUN apt-get update
+
 # Install MP4 Automator
 RUN apt-get install \
   python-setuptools \
   python-pip \
-  python \
   git \
   ffmpeg
 RUN pip install --upgrade PIP
@@ -18,6 +20,7 @@ RUN pip install requests-cache
 RUN pip install babelfish
 RUN pip install 'guessit<2'
 RUN pip install 'subliminal<2'
+RUN pip uninstall stevedore
 RUN pip install stevedore==1.19.1
 RUN pip install qtfaststart
 RUN git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git mp4automator
