@@ -2,13 +2,13 @@ FROM linuxserver/sabnzbd
 MAINTAINER wjbeckett
 
 # Install Git
-RUN apk add --no-cache git
+RUN apt-get install --no-cache git
 
 # Install MP4 Automator
-RUN apk add --no-cache \
-  py-setuptools \
-  py-pip \
-  python-dev \
+RUN apt-get install --no-cache \
+  python-setuptools \
+  python-pip \
+  python \
   libffi-dev \
   gcc \
   musl-dev \
