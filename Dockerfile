@@ -8,7 +8,7 @@ LABEL maintainer="wjbeckett"
 RUN apt-get update
 
 # Install MP4 Automator
-RUN apt-get install \
+RUN apt-get install -y \
   python-setuptools \
   python-pip \
   git \
