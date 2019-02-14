@@ -20,7 +20,7 @@ RUN pip install requests-cache
 RUN pip install babelfish
 RUN pip install 'guessit<2'
 RUN pip install 'subliminal<2'
-RUN pip uninstall stevedore
+RUN pip uninstall -y stevedore
 RUN pip install stevedore==1.19.1
 RUN pip install qtfaststart
 RUN git clone git://github.com/mdhiggins/sickbeard_mp4_automator.git mp4automator
