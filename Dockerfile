@@ -2,17 +2,14 @@ FROM linuxserver/sabnzbd
 MAINTAINER wjbeckett
 
 # Install Git
-RUN apt-get install --no-cache git
+#RUN apt-get install --no-cache git
 
 # Install MP4 Automator
-RUN apt-get install --no-cache \
+RUN apt-get install \
   python-setuptools \
   python-pip \
   python \
-  libffi-dev \
-  gcc \
-  musl-dev \
-  openssl-dev \
+  git \
   ffmpeg
 RUN pip install --upgrade PIP
 RUN pip install requests
